@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "target": "esnext",
+    "target": "ES2022",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "outDir": "./build"
   }
 }
