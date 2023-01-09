@@ -1,11 +1,10 @@
-import express from 'express';
-
+import express, { Application, Request, Response, NextFunction } from "express"
+let portNo: number = 4000;
 const app = express();
-app.listen(4000, () => {
-  console.log(`server running on port 4000`);
+app.set('port',  portNo);
+app.listen(portNo, () => {
+  console.log(`server running on port ${portNo}`);
 });
-
-app.get('/', (req, res) => {
-  res.send('Express + TypeScript Server');
-});
-
+app.get("/", (req: Request, res: Response) => {
+  res.send("TS App is Running")
+})
